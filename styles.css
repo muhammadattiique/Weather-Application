@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #0f172a;
+}
+
+/* ================= NAVBAR ================= */
+.navigation ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #1e3a8a;
+    color: #ffffff;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navigation ul li a:hover {
+    color: #38bdf8;
+    transform: scale(1.05);
+}
+
+/* ================= HOME ================= */
+.home {
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 10px;
+
+    background: linear-gradient(135deg, #e0f2fe, #f5f7fb);
+}
+
+.home h1 {
+    font-size: 3rem;
+    color: #1e3a8a;
+}
+
+.home p {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: #334155;
+}
+
+.home button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    width: 250px;
+    height: 50px;
+
+    border-radius: 15px;
+    background-color: #1e3a8a;
+    color: #ffffff;
+    border: none;
+
+    transition: 0.3s;
+}
+
+.home button:hover {
+    background-color: #38bdf8;
+    transform: translateY(-3px);
+}
+
+/* ================= FEATURES ================= */
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.features h2{
+    color: #1e3a8a;
+}
+
+.feature-item {
+    background: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.feature-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* ================= ABOUT ================= */
+.about {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #eaf0ff, #f5f7fb);
+}
+
+.about h2 {
+    font-size: 2.2rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    max-width: 700px;
+    margin: 10px auto;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.about-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 600px;
+    margin: 30px auto 0;
+}
+
+.about-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #1e3a8a;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    background-color: #f0f7ff;
+}
+
+/* ================= FOOTER ================= */
+#footer-nav {
+    background-color: #1e3a8a;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* ================= EXTRA ================= */
+section {
+    scroll-margin-top: 80px;
+}
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+
+    .home h1 {
+        font-size: 2.5rem;
+    }
+
+    .home p {
+        font-size: 1.1rem;
+    }
+
+    .feature-list {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+
+    .about-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+    /* NAVBAR STACK */
+    .navigation ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* HOME TEXT SIZE */
+    .home h1 {
+        font-size: 2rem;
+    }
+
+    .home p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .home button {
+        width: 200px;
+    }
+
+    /* FEATURES → 1 COLUMN */
+    .feature-list {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    /* ABOUT → 1 COLUMN */
+    .about-boxes {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+}
+
+/*Small Mobile Responsiveness*/
+@media (max-width: 480px) {
+
+    .home h1 {
+        font-size: 1.7rem;
+    }
+
+    .home button {
+        width: 180px;
+        font-size: 0.9rem;
+    }
+
+    .feature-item {
+        padding: 15px;
+    }
+}

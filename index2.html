@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Application</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles2.css">
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- SEARCH -->
+
+        <div class="container">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name">
+
+            <button id="getWeatherBtn">
+
+                Get Weather
+
+            </button>
+
+        </div>
+
+
+
+        <!-- LOADER -->
+
+        <div id="loader">
+
+            <div class="spinner"></div>
+
+            <p>Loading...</p>
+
+        </div>
+
+
+
+        <!-- RESULTS (HIDDEN INITIALLY) -->
+
+        <div id="results">
+
+            <!-- CURRENT WEATHER -->
+
+            <div class="current-weather">
+
+                <h2 id="cityName">
+
+                    City Name
+
+                </h2>
+
+                <p id="temperature">
+
+                    Temperature
+
+                </p>
+
+                <p id="description">
+
+                    Description
+
+                </p>
+
+                <br>
+
+                <p id="feelsLikeText">
+
+                    <b>Feels Like:- </b>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- WEATHER DETAILS -->
+
+            <div class="weather-details">
+
+                <table>
+
+                    <tr>
+
+                        <th>Humidity</th>
+
+                        <th>Wind</th>
+
+                        <th>Pressure</th>
+
+                        <th>Sea Level</th>
+
+                        <th>Longitude</th>
+
+                        <th>Latitude</th>
+
+                    </tr>
+
+                    <tr>
+
+                        <td id="humidity">--</td>
+
+                        <td id="wind">--</td>
+
+                        <td id="pressure">--</td>
+
+                        <td id="sea_level">--</td>
+
+                        <td id="longitude">--</td>
+
+                        <td id="latitude">--</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- FORECAST -->
+
+            <div class="forecast">
+
+                <h3>
+
+                    5-Day Forecast
+
+                </h3>
+
+                <div id="forecastContainer">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
